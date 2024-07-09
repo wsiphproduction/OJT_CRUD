@@ -7,18 +7,11 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * The database connection that should be used by the migration.
-     *
-    * @var string
-    */
-    protected $connection = 'mysql';
- 
-    /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('to_do_list', function (Blueprint $table) {
+        Schema::create('to_do_lists', function (Blueprint $table) {
             $table->increments('id');
             $table->string('task');
             $table->date('created_at');
@@ -31,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('to_do_list');
+        Schema::dropIfExists('to_do_lists');
     }
 };
