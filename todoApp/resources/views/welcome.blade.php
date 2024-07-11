@@ -13,21 +13,19 @@
 
     <table class="table table-stripped table-dark">
         <tr>
-            <th>ID</th>
             <th>Task</th>
-            <th>Created at</th>
-            <th>Updated at</th>
             <th>Action</th>
         </tr>
+        @foreach ($todos as $todo)
         <tr valign='middle'>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{$todo->task}}</td>
             <td>
-                <a href="" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm">Edit</a>
+                <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
+        @endforeach
+
     </table>
 </div>
 

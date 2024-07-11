@@ -10,19 +10,14 @@
         <div class="h2">Update a task</div>
         <a href="" class="btn btn-primary btn-lg">Back</a>
     </div>
-
+    
     <div class="card">
         <div class="card-body">
-        <form action="" method="post">
+        <form action="{{route("todo.updateData")}}" method="post">
             @csrf
-            <label for="" class="form-label">ID</label>
-            <input type="text" name="name" class="form-control">
-            <label for="" class="form-label mt-4">Task</label>
-            <input type="text" name="name" class="form-control">
-            <label for="" class="form-label mt-4">Created at</label>
-            <input type="date" name="name" class="form-control">
-            <label for="" class="form-label mt-4">Updated at</label>
-            <input type="date" name="name" class="form-control">
+            <label for="" class="form-label mt-2">Task</label>
+            <input type="text" name="task" class="form-control" value="{{$todo->task}}">
+            <input type="number" name="id" value="{{$todo->id}}" hidden>
         <button class="btn btn-primary btn-lg mt-4">Update task</button>
         </form>
     </div>
