@@ -6,11 +6,11 @@
 @section('main-section')
 
 <div class="container">
-    <div class="d-flex justify-content-between align-items-center my-5">
+    <div class="d-flex justify-content-between align-items-center my-6">
         <div class="h2">Update a task</div>
-        <a href="" class="btn btn-primary btn-lg">Back</a>
+        <a href="{{route("todo.home")}}" class="btn btn-primary btn-lg my-3">Back</a>
     </div>
-    
+
     <div class="card">
         <div class="card-body">
         <form action="{{route("todo.updateData")}}" method="post">

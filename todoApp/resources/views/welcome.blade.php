@@ -6,9 +6,9 @@
 @section('main-section')
 
 <div class="container">
-    <div class="d-flex justify-content-between align-items-center my-5">
+    <div class="d-flex justify-content-between align-items-center my-6">
         <div class="h2">All Tasks</div>
-        <a href="{{route("todo.create")}}" class="btn btn-primary btn-lg">Add a task</a>
+        <a href="{{route("todo.create")}}" class="btn btn-primary btn-lg my-3">Add a task</a>
     </div>
 
     <table class="table table-stripped table-dark">
@@ -20,8 +20,8 @@
         <tr valign='middle'>
             <td>{{$todo->task}}</td>
             <td>
-                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm">Edit</a>
-                <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger btn-sm">Delete</a>
+                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success data-mdb-ripple-init">Edit</a>
+                <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger data-mdb-ripple-init">Delete</a>
             </td>
         </tr>
         @endforeach
