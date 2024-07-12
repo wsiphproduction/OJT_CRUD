@@ -11,12 +11,12 @@
         <a href="{{route("todo.home")}}" class="btn btn-primary btn-lg my-3">Back</a>
     </div>
 
-    <div class="card">
-        <div class="card-body">
+    <div class="card mask-custom">
+        <div class="card-body p-10">
         <form action="{{route("todo.updateData")}}" method="post">
             @csrf
-            <label for="" class="form-label mt-2">Task</label>
-            <input type="text" name="task" class="form-control" value="{{$todo->task}}">
+            <label for="" class="form-label mt-2 text-white h4">Task</label>
+            <input type="text" name="task" class="py-2 form-control shadow" value="{{$todo->task}}">
             <input type="number" name="id" value="{{$todo->id}}" hidden>
         <button class="btn btn-primary btn-lg mt-4">Update task</button>
         </form>

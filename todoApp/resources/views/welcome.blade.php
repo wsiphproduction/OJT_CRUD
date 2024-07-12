@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @push('head')
-    <title> To-do List</title>
+    <title>To-do List</title>
 @endpush
 
 @section('main-section')
@@ -9,9 +9,11 @@
     <div class="d-flex justify-content-between align-items-center my-6">
         <div class="h2">All Tasks</div>
         <a href="{{route("todo.create")}}" class="btn btn-primary btn-lg my-3">Add a task</a>
-    </div>
+        </div>
 
-    <table class="table table-stripped table-dark">
+    <div class="card mask-custom">
+        <div class="card-body p-10">
+    <table class="table table-stripped text-white table-transparent">
         <tr>
             <th>Task</th>
             <th>Action</th>
@@ -27,6 +29,8 @@
         @endforeach
 
     </table>
+        </div>
+    </div>
 </div>
 
 
