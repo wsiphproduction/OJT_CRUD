@@ -15,11 +15,13 @@ class todosController extends Controller
     public function store(Request $request){
         $request->validate(
             [
-                'task'=>'required'
+                'task'=>'required|max:50',
+                'duration'=>'required|integer'
             ]
             );
         $todo=new todos;
         $todo->task=$request['task'];
+        $todo->duration=$request['duration'];
         $todo->save();
 
         return redirect(route("todo.home"));
@@ -39,12 +41,14 @@ class todosController extends Controller
     public function updateData(Request $request){
         $request->validate(
             [
-                'task'=>'required'
+                'task'=>'required|max:50',
+                'duration'=>'required|integer'
             ]
             );
         $id=$request['id'];
         $todo=todos::find($id);
         $todo->task=$request['task'];
+        $todo->duration=$request['duration'];
         $todo->save();
 
         return redirect(route("todo.home"));

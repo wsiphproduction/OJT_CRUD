@@ -21,8 +21,8 @@
         </tr>
         @foreach ($todos as $todo)
         <tr valign='middle'>
-            <td>{{$todo->task}}</td>
-            <td> </td>
+            <td style="width:60%">{{$todo->task}}</td>
+            <td style="width:20%">{{$todo->duration}}</td>
             <td>
                 <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success data-mdb-ripple-init">Edit</a>
                 <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger data-mdb-ripple-init" onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>

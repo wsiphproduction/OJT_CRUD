@@ -23,7 +23,7 @@
                 @enderror
             </div>
             <label for="" class="form-label mt-2 text-white h6">Duration of task (in days)</label>
-            <input type="text" name="duration" class="py-2 form-control shadow">
+            <input type="number" name="duration" class="py-2 form-control shadow">
             <div class="text-danger">
                 @error('duration')
                 {{$message}}
