@@ -32,7 +32,7 @@
         <div class="h1 text-white text-center">To-do List</div>
         </div>
     </div>
-    <div class="gradient-custom w-100" style="height: 730px;">
+    <div class="gradient-custom w-100" style="height: 900px;">
     @yield('main-section')
     </div> 
 </body>

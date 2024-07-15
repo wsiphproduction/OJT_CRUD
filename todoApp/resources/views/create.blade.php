@@ -12,7 +12,7 @@
     </div>
     <div class="card mask-custom">
         <div class="card-body p-10">
-        <form action="{{route("todo.store")}}" method="post">
+        <form action="{{route("todo.store")}}" method="post" enctype="multipart/form-data">
             @csrf
 
             <label for="" class="form-label mt-2 text-white h6">Task Description</label>
@@ -29,6 +29,8 @@
                 {{$message}}
                 @enderror
             </div>
+            <label for="" class="form-label mt-2 text-white h6">Upload Image</label>
+            <input type="file" name="image" class="py-2 form-control shadow">
         <button class="btn btn-primary btn-lg mt-4">Add task</button>
         </form>
     </div>

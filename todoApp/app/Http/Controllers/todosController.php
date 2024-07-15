@@ -16,12 +16,27 @@ class todosController extends Controller
         $request->validate(
             [
                 'task'=>'required|max:50',
-                'duration'=>'required|integer'
+                'duration'=>'required|integer',
+                'image'=>'nullable|mimes:png,jpg,jpeg,webp'
             ]
             );
+
+            if($request->has('image')){
+
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+            
+                $filename = time().'.'.$extension;
+
+                $path = 'uploads/todos/';
+                $file->move($path, $filename);
+
+            }
+
         $todo=new todos;
         $todo->task=$request['task'];
         $todo->duration=$request['duration'];
+        $todo->image=$path.$filename;
         $todo->save();
 
         return redirect(route("todo.home"));
@@ -42,13 +57,28 @@ class todosController extends Controller
         $request->validate(
             [
                 'task'=>'required|max:50',
-                'duration'=>'required|integer'
+                'duration'=>'required|integer',
+                'image'=>'nullable|mimes:png,jpg,jpeg,webp'
             ]
             );
+
+            if($request->has('image')){
+
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+            
+                $filename = time().'.'.$extension;
+
+                $path = 'uploads/todos/';
+                $file->move($path, $filename);
+
+            }
+
         $id=$request['id'];
         $todo=todos::find($id);
         $todo->task=$request['task'];
         $todo->duration=$request['duration'];
+        $todo->image=$path.$filename;
         $todo->save();
 
         return redirect(route("todo.home"));

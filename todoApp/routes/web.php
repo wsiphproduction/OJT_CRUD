@@ -11,11 +11,10 @@ Route::get('/create', function () {
 
 
 //edit todo route
-Route::get('/edit/{id}',[todosController::class,'edit'])->name("todo.edit");
+Route::get('/edit/{id}', [todosController::class,'edit'])->name("todo.edit");
 
 //delete todo route
 Route::get('/delete/{id}', [todosController::class,'delete'])->name("todo.delete");
-
 
 // update todo data route
 Route::post('/update', [todosController::class,'updateData'])->name("todo.updateData");
