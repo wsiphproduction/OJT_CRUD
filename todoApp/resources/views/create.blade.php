@@ -15,10 +15,17 @@
         <form action="{{route("todo.store")}}" method="post">
             @csrf
 
-            <label for="" class="form-label mt-2 text-white h4">Task</label>
+            <label for="" class="form-label mt-2 text-white h6">Task Description</label>
             <input type="text" name="task" class="py-2 form-control shadow">
             <div class="text-danger">
                 @error('task')
+                {{$message}}
+                @enderror
+            </div>
+            <label for="" class="form-label mt-2 text-white h6">Duration of task (in days)</label>
+            <input type="text" name="duration" class="py-2 form-control shadow">
+            <div class="text-danger">
+                @error('duration')
                 {{$message}}
                 @enderror
             </div>

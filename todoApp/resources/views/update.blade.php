@@ -15,9 +15,11 @@
         <div class="card-body p-10">
         <form action="{{route("todo.updateData")}}" method="post">
             @csrf
-            <label for="" class="form-label mt-2 text-white h4">Task</label>
+            <label for="" class="form-label mt-2 text-white h6">Task Description</label>
             <input type="text" name="task" class="py-2 form-control shadow" value="{{$todo->task}}">
             <input type="number" name="id" value="{{$todo->id}}" hidden>
+            <label for="" class="form-label mt-2 text-white h6">Duration of task (in days)</label>
+            <input type="text" name="duration" class="py-2 form-control shadow">
         <button class="btn btn-primary btn-lg mt-4">Update task</button>
         </form>
     </div>
