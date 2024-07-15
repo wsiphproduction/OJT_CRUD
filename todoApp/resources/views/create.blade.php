@@ -22,14 +22,14 @@
                 {{$message}}
                 @enderror
             </div>
-            <label for="" class="form-label mt-2 text-white h6">Duration of task (in days)</label>
+            <label for="" class="form-label mt-4 text-white h6">Duration of task (in days)</label>
             <input type="number" name="duration" class="py-2 form-control shadow">
             <div class="text-danger">
                 @error('duration')
                 {{$message}}
                 @enderror
             </div>
-            <label for="" class="form-label mt-2 text-white h6">Upload Image</label>
+            <label for="" class="form-label mt-4 text-white h6">Upload Image</label>
             <input type="file" name="image" class="py-2 form-control shadow">
         <button class="btn btn-primary btn-lg mt-4">Add task</button>
         </form>
