@@ -17,7 +17,7 @@ class todosController extends Controller
             [
                 'task'=>'required|max:50',
                 'duration'=>'required|integer',
-                'image'=>'required|image|mimes:png,jpg,jpeg,webp'
+                'image'=>'required|mimes:png,jpg,jpeg,webp'
             ]
             );
 
@@ -30,7 +30,7 @@ class todosController extends Controller
 
                 $path = 'uploads/todos/';
                 $file->move($path, $filename);
-
+                
             }
 
         $todo=new todos;
@@ -58,7 +58,7 @@ class todosController extends Controller
             [
                 'task'=>'required|max:50',
                 'duration'=>'required|integer',
-                'image'=>'required|image|mimes:png,jpg,jpeg,webp'
+                'image'=>'required|mimes:png,jpg,jpeg,webp'
             ]
             );
 

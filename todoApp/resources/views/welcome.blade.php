@@ -25,7 +25,7 @@
             <td>{{$todo->task}}</td>
             <td >{{$todo->duration}}</td>
             <td>
-                <img src="{{ asset($todo->image) }}" style="width:50px; height:50px;" alt="">
+                <img src="{{asset($todo->image)}}" style="width:50px; height:50px;" alt="">
             </td>
             <td>
                 <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success data-mdb-ripple-init">Edit</a>
