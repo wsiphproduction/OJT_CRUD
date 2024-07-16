@@ -28,8 +28,8 @@
                 <img src="{{asset($todo->image)}}" style="width:50px; height:50px;" alt="">
             </td>
             <td>
-                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success data-mdb-ripple-init">Edit</a>
-                <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger data-mdb-ripple-init" onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>
+                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success data-mdb-ripple-init editBtn">Edit</a>
+                <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger data-mdb-ripple-init deleteBtn" onclick="confirmation(event)">Delete</a>
             </td>
         </tr>
         @endforeach
@@ -39,5 +39,46 @@
     </div>
 </div>
 
+<script type="text/javascript">
+
+    function  confirmation(ev)
+    {
+
+        ev.preventDefault();
+
+        var routeToRedirect=ev.currentTarget.getAttribute('href');
+
+        console.log(routeToRedirect);
+
+        swal({
+
+            title: "Are you sure to delete this task? " ,
+ 
+            text: "You won't be able to revert this action " ,
+
+            icon: "warning" ,
+
+            buttons: true,
+
+            dangerMode: true,
+
+        })
+
+        .then((willCancel)=>
+
+        {
+
+            if(willCancel)
+            {
+                window.location.href=routeToRedirect;
+            }
+
+        });
+    }
+    </script>
 
 @endsection
+
+
+
+
