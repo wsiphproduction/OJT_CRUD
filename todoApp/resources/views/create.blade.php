@@ -31,6 +31,11 @@
             </div>
             <label for="" class="form-label mt-4 text-white h6">Upload Image</label>
             <input type="file" name="image" class="py-2 form-control shadow">
+            <div class="text-danger">
+                @error('image')
+                {{$message}}
+                @enderror
+            </div>
         <button class="btn btn-primary btn-lg mt-4">Add task</button>
         </form>
     </div>

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('todos', function (Blueprint $table) {
             $table->after('duration',function ($table) {
-                $table->string('image')->nullable();
+                $table->string('image')->required();
         });
             
         });

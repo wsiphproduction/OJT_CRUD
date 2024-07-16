@@ -23,7 +23,7 @@
         @foreach ($todos as $todo)
         <tr valign='middle'>
             <td>{{$todo->task}}</td>
-            <td>{{$todo->duration}}</td>
+            <td >{{$todo->duration}}</td>
             <td>
                 <img src="{{ asset($todo->image) }}" style="width:50px; height:50px;" alt="">
             </td>

@@ -17,7 +17,7 @@ class todosController extends Controller
             [
                 'task'=>'required|max:50',
                 'duration'=>'required|integer',
-                'image'=>'nullable|mimes:png,jpg,jpeg,webp'
+                'image'=>'required|image|mimes:png,jpg,jpeg,webp'
             ]
             );
 
@@ -58,7 +58,7 @@ class todosController extends Controller
             [
                 'task'=>'required|max:50',
                 'duration'=>'required|integer',
-                'image'=>'nullable|mimes:png,jpg,jpeg,webp'
+                'image'=>'required|image|mimes:png,jpg,jpeg,webp'
             ]
             );
 
