@@ -8,7 +8,7 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center my-6">
         <div class="h2">Add a task</div>
-        <a href="{{route("todo.home")}}" class="btn btn-primary btn-lg my-3">Back</a>
+        <a href="{{route("todo.home")}}" class="btn btn-outline-dark btn-lg my-3">Back</a>
     </div>
     <div class="card mask-custom">
         <div class="card-body p-10">
@@ -36,7 +36,7 @@
                 {{$message}}
                 @enderror
             </div>
-        <button class="btn btn-primary btn-lg mt-4">Add task</button>
+        <button class="btn btn-outline-dark btn-lg mt-4">Add task</button>
         </form>
     </div>
 </div>

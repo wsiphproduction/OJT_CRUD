@@ -8,7 +8,7 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center my-6">
         <div class="h2">All Tasks</div>
-        <a href="{{route("todo.create")}}" class="btn btn-primary btn-lg my-3">Add a task</a>
+        <a href="{{route("todo.create")}}" class="btn btn-outline-dark btn-lg my-3">Add a task</a>
         </div>
 
     <div class="card mask-custom">
