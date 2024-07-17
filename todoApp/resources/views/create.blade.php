@@ -10,6 +10,13 @@
         <div class="h2">Add a task</div>
         <a href="{{route("todo.home")}}" class="btn btn-outline-dark btn-lg my-3">Back</a>
     </div>
+
+    @if(Session::has('success'))
+        <div class="alert alert-success" role="alert">
+            {{Session::get('success')}}
+        </div>
+    @endif
+    
     <div class="card mask-custom">
         <div class="card-body p-10">
         <form action="{{route("todo.store")}}" method="post" enctype="multipart/form-data">

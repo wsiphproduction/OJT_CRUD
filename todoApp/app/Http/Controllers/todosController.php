@@ -40,7 +40,7 @@ class todosController extends Controller
         $todo->image=$path.$filename;
         $todo->save();
 
-        return redirect(route("todo.home"))->with('success','Task added successfully');
+        return redirect(route("todo.store"))->with('success','Task added successfully');
     }
 
     public function edit($id){
@@ -51,7 +51,7 @@ class todosController extends Controller
 
     public function delete($id){
         todos::find($id)->delete();
-        return redirect(route("todo.home"));
+        return redirect(route("todo.home"))->with('deleted','Task deleted successfully');
     }
 
     public function updateData(Request $request){
