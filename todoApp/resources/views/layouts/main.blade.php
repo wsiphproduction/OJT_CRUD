@@ -36,6 +36,9 @@
     <div class="gradient-custom w-100" style="height: 900px;">
     @yield('main-section')
     </div> 
+
+    
+
 </body>
 
 </html>

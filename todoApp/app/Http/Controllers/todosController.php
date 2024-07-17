@@ -13,7 +13,8 @@ class todosController extends Controller
         return view("welcome")->with($data);
     }
     public function store(Request $request){
-        $request->validate(
+        
+            $request->validate(
             [
                 'task'=>'required|max:50',
                 'duration'=>'required|integer',
@@ -39,7 +40,7 @@ class todosController extends Controller
         $todo->image=$path.$filename;
         $todo->save();
 
-        return redirect(route("todo.home"));
+        return redirect(route("todo.home"))->with('success','Task added successfully');
     }
 
     public function edit($id){
@@ -81,6 +82,6 @@ class todosController extends Controller
         $todo->image=$path.$filename;
         $todo->save();
 
-        return redirect(route("todo.home"));
+        return redirect(route("todo.home"))->with('update','Task updated successfully');
     }
 }

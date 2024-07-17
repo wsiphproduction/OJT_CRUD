@@ -10,7 +10,17 @@
         <div class="h2">All Tasks</div>
         <a href="{{route("todo.create")}}" class="btn btn-outline-dark btn-lg my-3">Add a task</a>
         </div>
-        
+        @if(Session::has('success'))
+    <div class="alert alert-success" role="alert">
+        {{Session::get('success')}}
+    </div>
+    @endif
+
+    @if(Session::has('update'))
+    <div class="alert alert-success" role="alert">
+        {{Session::get('update')}}
+    </div>
+    @endif
     <div class="card mask-custom">
         <div class="card-body p-10">
     <table class="table table-stripped text-white table-transparent table-hover">
