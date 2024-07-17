@@ -10,10 +10,10 @@
         <div class="h2">All Tasks</div>
         <a href="{{route("todo.create")}}" class="btn btn-outline-dark btn-lg my-3">Add a task</a>
         </div>
-
+        
     <div class="card mask-custom">
         <div class="card-body p-10">
-    <table class="table table-stripped text-white table-transparent">
+    <table class="table table-stripped text-white table-transparent table-hover">
         <tr>
             <th>Task</th>
             <th>Duration (in days)</th>

@@ -10,11 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         .gradient-custom {
-            background: linear-gradient(to right, rgba(106,17,203,0.5), rgba(37,117,252,0.5))
+            background: radial-gradient(circle at 10% 20%, rgb(148, 241, 246) 0%, rgb(148, 189, 246) 100.7%);
         }
         .gradient-header {
             height: 80px;
-            background-image: linear-gradient(#0052b0, #b340b3);
+            background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%);
         }
         .mask-custom {
             background: rgba(24, 24, 16, 0.2);
@@ -28,7 +28,7 @@
 </head>
 <body>
 
-<div class="bg-dark">
+<div class="gradient-header">
         <div class="container py-3">
         <div class="h1 text-white text-center">To-do List</div>
         </div>
